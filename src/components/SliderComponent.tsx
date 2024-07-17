@@ -19,32 +19,32 @@ const SliderComponent = () => {
     <Slider {...settings}>
       <div className='bg-gray-200 h-[356px]'>
         <div className='flex justify-center items-center'>
-          <Image className='h-[356px] w-auto' src={Image1} width={100} height={100} alt='slider-image' />
+          <Image className='h-[356px] w-auto' src={Image1} width={700} height={700} alt='slider-image' />
         </div>
       </div>
       <div className='bg-gray-200 h-[356px]'>
         <div className='flex justify-center items-center'>
-          <Image className='h-[356px] w-auto' src={Image4} width={100} height={100} alt='slider-image' />
+          <Image className='h-[356px] w-auto' src={Image4} width={700} height={700} alt='slider-image' />
         </div>
       </div>
       <div className='bg-gray-200 h-[356px]'>
         <div className='flex justify-center items-center'>
-          <Image className='h-[356px] w-auto' src={Image1} width={100} height={100} alt='slider-image' />
+          <Image className='h-[356px] w-auto' src={Image1} width={700} height={700} alt='slider-image' />
         </div>
       </div>
       <div className='bg-gray-200 h-[356px]'>
         <div className='flex justify-center items-center'>
-          <Image className='h-[356px] w-auto' src={Image4} width={100} height={100} alt='slider-image' />
+          <Image className='h-[356px] w-auto' src={Image4} width={700} height={700} alt='slider-image' />
         </div>
       </div>
       <div className='bg-gray-200 h-[356px]'>
         <div className='flex justify-center items-center'>
-          <Image className='h-[356px] w-auto' src={Image1} width={100} height={100} alt='slider-image' />
+          <Image className='h-[356px] w-auto' src={Image1} width={700} height={700} alt='slider-image' />
         </div>
       </div>
       <div className='bg-gray-200 h-[356px]'>
         <div className='flex justify-center items-center'>
-          <Image className='h-[356px] w-auto' src={Image4} width={100} height={100} alt='slider-image' />
+          <Image className='h-[356px] w-auto' src={Image4} width={700} height={700} alt='slider-image' />
         </div>
       </div>
     </Slider>

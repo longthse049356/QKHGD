@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const NavbarFooter = () => {
   return (
-    <nav className='bg-blue-700 border-gray-200 dark:bg-gray-900 text-white mt-10'>
+    <nav className='bg-blue-700 border-gray-200 text-white mt-10'>
       <div className='w-[1024px] mx-auto py-2' id='navbar-default'>
         <ul className='flex gap-6 text-lg font-medium text-white'>
           <li>

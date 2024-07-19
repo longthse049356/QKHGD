@@ -28,7 +28,7 @@ const NavbarFooter = () => {
           </li>
           <li>
             <Link href='#' className='text-base block py-2'>
-              Khuyến học khí tài
+              Khuyến học khuyến tài
             </Link>
           </li>
           <li>

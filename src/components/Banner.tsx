@@ -7,7 +7,7 @@ const Banner = () => {
         <div className='bg-blue-600 flex items-center px-3 h-[270px]'>
             <Link href='/' title='Home'>
                 <Image
-                    className='w-full'
+                    className='w-full h-[270px]'
                     alt='quy khuyen hoc'
                     title='quy khuyen hoc'
                     src='/banner.png'

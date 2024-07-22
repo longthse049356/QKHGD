@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Banner = () => {
     return (
-        <div className='bg-blue-600 flex items-center pr-2 h-[250px]'>
+        <div className='bg-blue-600 flex items-center px-3 h-[270px]'>
             <Link href='/' title='Home'>
                 <Image
                     className='w-full'
@@ -18,17 +18,17 @@ const Banner = () => {
             </Link>
             {/*<Link href='/' title='Home'>*/}
             {/*    <Image*/}
-            {/*        className='w-52'*/}
+            {/*        className='w-[140px] h-[176px] rounded-sm'*/}
             {/*        alt='quy khuyen hoc'*/}
             {/*        title='quy khuyen hoc'*/}
-            {/*        src='/khue_van_cac.svg'*/}
-            {/*        width={60}*/}
-            {/*        height={60}*/}
+            {/*        src='/IMG_0550.jpg'*/}
+            {/*        width={500}*/}
+            {/*        height={500}*/}
             {/*        quality={100}*/}
             {/*    />*/}
             {/*</Link>*/}
-            {/*<div className="flex-1 h-[220px] text-white flex justify-between px-6 items-center">*/}
-            {/*    <div className="text-6xl leading-[70px] font-bold">Khuyến Học <br/>Giáp Đông</div>*/}
+            {/*<div className="flex-1 h-[240px] text-white flex justify-between px-6 items-center">*/}
+            {/*    <div className={cn('text-6xl leading-[120px] font-bold italic', myFont.className)}>Khuyến Học <br/>Giáp Đông</div>*/}
             {/*    <div className="">*/}
             {/*        <div className='text-xl'>*/}
             {/*            <p>&quot;Hiền tài là nguyên khí quốc gia&ldquo;</p>*/}
@@ -37,7 +37,7 @@ const Banner = () => {
             {/*        <div className='text-xl mt-4'>*/}
             {/*            <p>Khuyến học khuyến tài:</p>*/}
             {/*            <p className="pl-6">Xây dựng nền tảng &quot;Sức Khoẻ - Tri Thức - Đạo Đức&ldquo;</p>*/}
-            {/*            <p className="pl-6">Phát triển văn hoá &quot;Chuẩn Mực - Văn Hoá - Nghĩa Tình&ldquo;</p>*/}
+            {/*            <p className="pl-6">Phát triển văn hoá &quot;Chuẩn Mực - Sáng tạo - Nghĩa Tình&ldquo;</p>*/}
             {/*        </div>*/}
             {/*    </div>*/}
             {/*</div>*/}

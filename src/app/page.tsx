@@ -9,12 +9,8 @@ import Footer from '@/components/Footer'
 function Home() {
   return (
     <main className='min-h-screen'>
-      <Banner />
-      <Navbar />
       <SliderComponent />
       <News />
-      <NavbarFooter />
-      <Footer />
     </main>
   )
 }

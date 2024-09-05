@@ -56,15 +56,15 @@ const items: MenuProps['items'] = [
 
 const items2: MenuProps['items'] = [
     {
-        key: '1',
+        key: '5',
         label: 'Quy chế quỹ khuyến học',
     },
     {
-        key: '2',
+        key: '6',
         label: 'Cơ cấu tổ chức',
     },
     {
-        key: '3',
+        key: '7',
         label: 'Chức năng và nhiệm vụ',
     },
 ];
@@ -77,10 +77,20 @@ export const ROUTES = {
     '1-5': '/cau-doi',
     '1-6': '/noi-tu-va-ngoai-canh',
     '1-7': '/nha-bia-va-van-bia',
+    '2': '/quy-uoc-ho-tran',
+    '3': '/co-cau-to-chuc',
+    '4': '/chuc-nang-va-nhiem-vu',
+    '5': '/quy-che-quy-khuyen-hoc',
+    '6': '/co-cau-to-chuc-qkh',
+    '7': '/chuc-nang-va-nhiem-vu-qkh',
 }
 const Navbar = () => {
     const { push } = useRouter();
     const onClick = ({key}: any) => {
+        // @ts-ignore
+        push(ROUTES[key])
+    }
+    const onClick2 = ({key}: any) => {
         // @ts-ignore
         push(ROUTES[key])
     }
@@ -93,32 +103,24 @@ const Navbar = () => {
                 </Link>
 
                 <div className='hidden w-full md:block md:w-auto' id='navbar-default'>
-                    <ul className='flex gap-5 text-lg font-medium text-white'>
-                        <li>
-                            <Link href='/' className='text-base block py-2' aria-current='page'>
-                                Trang chủ
-                            </Link>
-                        </li>
-                        <li className="flex justify-center items-center">
-                            <Dropdown menu={{items, onClick}}>
-                                <Space className="text-base cursor-pointer">
-                                    Lịch sử họ Trần
-                                </Space>
-                            </Dropdown>
-                        </li>
-                        <li className="flex justify-center items-center">
-                            <Dropdown menu={{items: items2}}>
-                                <Space className="text-base cursor-pointer">
-                                    Khuyến học khuyến tài
-                                </Space>
-                            </Dropdown>
-                        </li>
-                        <li>
-                            <Link href='#' className='text-base block py-2'>
-                                Thông tin - Sự kiện
-                            </Link>
-                        </li>
-                    </ul>
+                    <div className='flex gap-5 text-lg font-medium text-white'>
+                        <Link href='/' className='text-base block py-2' aria-current='page'>
+                            Trang chủ
+                        </Link>
+                        <Dropdown menu={{items, onClick}}>
+                            <Space className="text-base cursor-pointer">
+                                Lịch sử họ Trần
+                            </Space>
+                        </Dropdown>
+                        <Dropdown menu={{items: items2, onClick: onClick2}}>
+                            <Space className="text-base cursor-pointer">
+                                Khuyến học khuyến tài
+                            </Space>
+                        </Dropdown>
+                        <Link href='#' className='text-base block py-2'>
+                            Thông tin - Sự kiện
+                        </Link>
+                    </div>
                 </div>
             </div>
         </nav>

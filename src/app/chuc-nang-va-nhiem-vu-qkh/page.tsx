@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const Page = async () => {
-    const filePath = path.join(process.cwd(), 'public', 'SULUOCHOTRANONGGIAP.html');
+    const filePath = path.join(process.cwd(), 'public', 'CHUCNANGVANHIEMVUCUABANIEUHANHKHUYENHOC.html');
     // Sử dụng fs để đọc file
     const htmlContent = fs.readFileSync(filePath, 'utf8');
     return (

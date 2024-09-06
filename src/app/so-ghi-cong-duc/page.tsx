@@ -24,31 +24,31 @@ const Page = () => {
             <p className="text-center">Ảnh chụp 1</p>
             <Image className="mt-6" src={Image2} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 2</p>
-            <Image className="mt-6" src={Image3} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image15} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 3</p>
-            <Image className="mt-6" src={Image4} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image14} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 4</p>
-            <Image className="mt-6" src={Image5} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image13} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 5</p>
-            <Image className="mt-6" src={Image6} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image12} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 6</p>
-            <Image className="mt-6" src={Image7} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image11} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 7</p>
-            <Image className="mt-6" src={Image8} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image10} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 8</p>
             <Image className="mt-6" src={Image9} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 9</p>
-            <Image className="mt-6" src={Image10} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image8} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 10</p>
-            <Image className="mt-6" src={Image11} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image7} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 11</p>
-            <Image className="mt-6" src={Image12} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image6} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 12</p>
-            <Image className="mt-6" src={Image13} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image5} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 13</p>
-            <Image className="mt-6" src={Image14} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image4} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 14</p>
-            <Image className="mt-6" src={Image15} width={900} height={500} alt='slider-image'/>
+            <Image className="mt-6" src={Image3} width={900} height={500} alt='slider-image'/>
             <p className="text-center mb-3">Ảnh chụp 15</p>
         </div>
     );

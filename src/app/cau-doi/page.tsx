@@ -21,55 +21,122 @@ import Image19 from "@/asset/cau-doi/cau-doi-19.png";
 import Image20 from "@/asset/cau-doi/cau-doi-20.png";
 import Image21 from "@/asset/cau-doi/cau-doi-21.png";
 import Image22 from "@/asset/cau-doi/cau-doi-22.png";
+import DauAn from "@/asset/cau-doi/dau-an.jpg";
 import Image from "next/image";
 
 const Page = () => {
     return (
         <div className="w-[900px] mx-auto">
             <p className="text-2xl text-center font-semibold">Ảnh câu đối</p>
-            <Image className="mt-6 border rounded" src={Image1} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image1} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center">Ảnh chụp 1</p>
-            <Image className="mt-6 border rounded" src={Image2} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image2} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 2</p>
-            <Image className="mt-6 border rounded" src={Image3} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image3} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 3</p>
-            <Image className="mt-6 border rounded" src={Image4} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image4} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 4</p>
-            <Image className="mt-6 border rounded" src={Image5} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image5} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 5</p>
-            <Image className="mt-6 border rounded" src={Image6} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image6} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 6</p>
-            <Image className="mt-6 border rounded" src={Image7} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image7} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 7</p>
-            <Image className="mt-6 border rounded" src={Image8} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image8} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 8</p>
-            <Image className="mt-6 border rounded" src={Image9} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image9} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 9</p>
-            <Image className="mt-6 border rounded" src={Image10} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image10} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 10</p>
-            <Image className="mt-6 border rounded" src={Image11} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image11} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 11</p>
-            <Image className="mt-6 border rounded" src={Image12} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image12} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 12</p>
-            <Image className="mt-6 border rounded" src={Image13} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image13} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 13</p>
-            <Image className="mt-6 border rounded" src={Image14} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image14} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 14</p>
-            <Image className="mt-6 border rounded" src={Image15} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image15} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 15</p>
-            <Image className="mt-6 border rounded" src={Image16} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image16} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 16</p>
-            <Image className="mt-6 border rounded" src={Image17} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image17} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 17</p>
-            <Image className="mt-6 border rounded" src={Image18} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image18} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 18</p>
-            <Image className="mt-6 border rounded" src={Image19} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image19} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 19</p>
-            <Image className="mt-6 border rounded" src={Image20} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image20} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 20</p>
-            <Image className="mt-6 border rounded" src={Image21} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image21} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 21</p>
-            <Image className="mt-6 border rounded" src={Image22} width={900} height={500} alt='slider-image'/>
+            <div className="relative">
+                <Image className="mt-6 border rounded" src={Image22} width={900} height={500} alt='slider-image'/>
+                <Image className="absolute top-0 left-0 w-48" src={DauAn} width={300} height={300} alt='slider-image'/>
+            </div>
             <p className="text-center mb-3">Ảnh chụp 22</p>
         </div>
     );

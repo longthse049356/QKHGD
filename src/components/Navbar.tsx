@@ -97,7 +97,7 @@ const Navbar = () => {
     return (
         <nav className='bg-blue-500 border-gray-200 text-white mb-4'>
             <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-                <Link href='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
+                <Link href='/quy-che-quy-khuyen-hoc' className='flex items-center space-x-3 rtl:space-x-reverse'>
                     <Image src='/logo.png' width={40} height={40} alt='logo'/>
                     <span className='self-center text-2xl font-semibold whitespace-nowrap'>Quỹ khuyến học</span>
                 </Link>

@@ -86,3 +86,7 @@ ul li {
 .bg-hero-image {
   background: url('/background.jpg') repeat;
 }
+
+.c25, .c23, .c16  {
+  background-color: transparent !important;
+}

@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const News = () => {
   return (
-    <div className='w-[1024px] mx-auto shadow flex gap-6 p-2 rounded'>
+    <div className='w-[1024px] mx-auto shadow flex gap-6 p-2 rounded bg-white'>
       <div className='max-w-[512px]'>
         <Image className='h-[300px] w-[512px]' src={Image1} width={300} height={512} alt='slider-image' />
         <div className='mt-5'>

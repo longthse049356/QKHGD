@@ -6,7 +6,7 @@ function Home() {
   return (
     <main className='min-h-screen'>
       <SliderComponent />
-      <News />
+        <News />
     </main>
   )
 }

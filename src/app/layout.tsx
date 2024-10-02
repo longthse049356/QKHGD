@@ -32,7 +32,9 @@ export default function RootLayout({
         <body className={cn('min-h-screen font-sans', fontSans.variable)}>
         <Banner/>
         <Navbar/>
-        {children}
+        <div className="bg-hero-image pb-10 pt-5">
+            {children}
+        </div>
         <NavbarFooter />
         <Footer />
         </body>

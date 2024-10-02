@@ -95,7 +95,7 @@ const Navbar = () => {
         push(ROUTES[key])
     }
     return (
-        <nav className='bg-blue-500 border-gray-200 text-white mb-4'>
+        <nav className='bg-blue-500 border-gray-200 text-white'>
             <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
                 <Link href='/quy-che-quy-khuyen-hoc' className='flex items-center space-x-3 rtl:space-x-reverse'>
                     <Image src='/logo.png' width={40} height={40} alt='logo'/>

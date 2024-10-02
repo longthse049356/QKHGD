@@ -93,7 +93,7 @@ const NavbarFooter = () => {
     push(ROUTES[key])
   }
   return (
-    <nav className='bg-blue-700 border-gray-200 text-white mt-10'>
+    <nav className='bg-blue-700 border-gray-200 text-white'>
       <div className='w-[1024px] mx-auto py-2' id='navbar-default'>
         <div className='flex gap-5 text-lg font-medium text-white'>
           <Link href='/' className='text-base block py-2' aria-current='page'>

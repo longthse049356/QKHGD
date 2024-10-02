@@ -82,3 +82,7 @@
 ul li {
   color: white;
 }
+
+.bg-hero-image {
+  background: url('/background.jpg') repeat;
+}

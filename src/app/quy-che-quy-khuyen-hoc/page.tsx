@@ -7,9 +7,8 @@ const Page = async () => {
     // Sử dụng fs để đọc file
     const htmlContent = fs.readFileSync(filePath, 'utf8');
     return (
-        <div className="w-[600px] mx-auto">
-            <p className="text-2xl text-center font-semibold mb-4">Quy chế quỹ khuyến học</p>
-            <div className="font-sans" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+        <div className="w-[700px] mx-auto">
+            <div className="font-sans bg-slate-100 p-4 rounded-md" dangerouslySetInnerHTML={{ __html: htmlContent }} />
         </div>
     );
 };

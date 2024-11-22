@@ -69,6 +69,17 @@ const items2: MenuProps['items'] = [
     },
 ];
 
+const items3: MenuProps['items'] = [
+    {
+        key: '8',
+        label: 'Mức thưởng khuyến học',
+    },
+    {
+        key: '9',
+        label: 'Danh mục tiêu chí được thưởng',
+    },
+];
+
 export const ROUTES = {
     '1-1': '/luoc-su-ho-tran',
     '1-2': '/sac-phong',
@@ -83,6 +94,8 @@ export const ROUTES = {
     '5': '/quy-che-quy-khuyen-hoc',
     '6': '/co-cau-to-chuc-qkh',
     '7': '/chuc-nang-va-nhiem-vu-qkh',
+    '8': '/muc-thuong-khuyen-hoc',
+    '9': '/danh-muc-tieu-chi-duoc-thuong',
 }
 const Navbar = () => {
     const { push } = useRouter();
@@ -117,9 +130,11 @@ const Navbar = () => {
                                 Khuyến học khuyến tài
                             </Space>
                         </Dropdown>
-                        <Link href='#' className='text-base block py-2'>
-                            Thông tin - Sự kiện
-                        </Link>
+                        <Dropdown menu={{items: items3, onClick: onClick2}}>
+                            <Space className="text-base cursor-pointer">
+                                Thông tin - Sự kiện
+                            </Space>
+                        </Dropdown>
                     </div>
                 </div>
             </div>

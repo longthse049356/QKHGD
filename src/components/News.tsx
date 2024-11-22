@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Image1 from '@/asset/SliderImg/TheProud1.jpg'
+import Image1 from '@/asset/tinified/anh-3.jpg'
 import NewIcon from '@/asset/img/new-icon.png'
 import Link from 'next/link'
 

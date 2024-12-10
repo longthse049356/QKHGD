@@ -9,74 +9,78 @@ import { useRouter } from 'next/navigation';
 const items: MenuProps['items'] = [
     {
         key: '1',
-        label: 'Lược sử họ Trần',
+        label: <span className="font-medium">Lược sử họ Trần</span>,
         children: [
             {
                 key: '1-1',
-                label: 'Lược sử',
+                label: <span className="font-medium">Lược sử</span>,
             },
             {
                 key: '1-2',
-                label: 'Sắc phong',
+                label: <span className="font-medium">Sắc phong</span>,
             },
             {
                 key: '1-3',
-                label: 'Giấy ghi nhận di tích lịch sử',
+                label: <span className="font-medium">Giấy ghi nhận di tích lịch sử</span>,
             },
             {
                 key: '1-4',
-                label: 'Sổ ghi công đức',
+                label: <span className="font-medium">Sổ ghi công đức</span>,
             }, {
                 key: '1-5',
-                label: 'Câu đối',
+                label: <span className="font-medium">Câu đối</span>,
             },
             {
                 key: '1-6',
-                label: 'Nội tự và ngoại cảnh',
+                label: <span className="font-medium">Nội tự và ngoại cảnh</span>,
             },
             {
                 key: '1-7',
-                label: 'Nhà bia và văn bia',
+                label: <span className="font-medium">Nhà bia và văn bia</span>,
             },
         ],
     },
     {
         key: '2',
-        label: 'Quy ước họ Trần',
+        label: <span className="font-medium">Quy ước họ Trần</span>,
     },
     {
         key: '3',
-        label: 'Cơ cấu tổ chức',
+        label: <span className="font-medium">Cơ cấu tổ chức</span>,
     },
     {
         key: '4',
-        label: 'Chức năng và nhiệm vụ',
+        label: <span className="font-medium">Chức năng và nhiệm vụ</span>,
     },
 ];
 
 const items2: MenuProps['items'] = [
     {
         key: '5',
-        label: 'Quy chế quỹ khuyến học',
+        label: <span className="font-medium">Quy chế quỹ khuyến học</span>,
     },
     {
         key: '6',
-        label: 'Cơ cấu tổ chức',
+        label: <span className="font-medium">Cơ cấu tổ chức</span>,
     },
     {
         key: '7',
-        label: 'Chức năng và nhiệm vụ',
+        label: <span className="font-medium">Chức năng và nhiệm vụ</span>,
+    },
+    {
+        key: '10',
+        label: <span className="font-medium">Ảnh trao thưởng</span>,
     },
 ];
 
 const items3: MenuProps['items'] = [
     {
         key: '8',
-        label: 'Mức thưởng khuyến học',
+        label: <span className="font-medium">Mức thưởng khuyến học</span>,
     },
     {
         key: '9',
-        label: 'Danh mục tiêu chí được thưởng',
+        label: <span className="font-medium">Danh mục tiêu chí được thưởng</span>,
     },
 ];
 
@@ -96,7 +100,9 @@ export const ROUTES = {
     '7': '/chuc-nang-va-nhiem-vu-qkh',
     '8': '/muc-thuong-khuyen-hoc',
     '9': '/danh-muc-tieu-chi-duoc-thuong',
+    '10': '/anh-trao-thuong',
 }
+
 const Navbar = () => {
     const { push } = useRouter();
     const onClick = ({key}: any) => {

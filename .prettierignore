@@ -1,0 +1,11 @@
+.next
+node_modules
+build
+dist
+out
+public
+.git
+.DS_Store
+*.lock
+package-lock.json
+yarn.lock 

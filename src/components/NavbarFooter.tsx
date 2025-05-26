@@ -1,8 +1,8 @@
-'use client'
-import React from 'react'
-import Link from 'next/link'
-import {Dropdown, MenuProps, Space} from "antd";
-import {useRouter} from "next/navigation";
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { Dropdown, MenuProps, Space } from 'antd';
+import { useRouter } from 'next/navigation';
 
 const items: MenuProps['items'] = [
   {
@@ -24,7 +24,8 @@ const items: MenuProps['items'] = [
       {
         key: '1-4',
         label: 'Sổ ghi công đức',
-      }, {
+      },
+      {
         key: '1-5',
         label: 'Câu đối',
       },
@@ -81,17 +82,17 @@ export const ROUTES = {
   '5': '/quy-che-quy-khuyen-hoc',
   '6': '/co-cau-to-chuc-qkh',
   '7': '/chuc-nang-va-nhiem-vu-qkh',
-}
+};
 const NavbarFooter = () => {
   const { push } = useRouter();
-  const onClick = ({key}: any) => {
+  const onClick = ({ key }: any) => {
     // @ts-ignore
-    push(ROUTES[key])
-  }
-  const onClick2 = ({key}: any) => {
+    push(ROUTES[key]);
+  };
+  const onClick2 = ({ key }: any) => {
     // @ts-ignore
-    push(ROUTES[key])
-  }
+    push(ROUTES[key]);
+  };
   return (
     <nav className='bg-blue-700 border-gray-200 text-white'>
       <div className='w-[1024px] mx-auto py-2' id='navbar-default'>
@@ -99,15 +100,11 @@ const NavbarFooter = () => {
           <Link href='/' className='text-base block py-2' aria-current='page'>
             Trang chủ
           </Link>
-          <Dropdown menu={{items, onClick}}>
-            <Space className="text-base cursor-pointer">
-              Lịch sử họ Trần
-            </Space>
+          <Dropdown menu={{ items, onClick }}>
+            <Space className='text-base cursor-pointer'>Lịch sử họ Trần</Space>
           </Dropdown>
-          <Dropdown menu={{items: items2, onClick: onClick2}}>
-            <Space className="text-base cursor-pointer">
-              Khuyến học khuyến tài
-            </Space>
+          <Dropdown menu={{ items: items2, onClick: onClick2 }}>
+            <Space className='text-base cursor-pointer'>Khuyến học khuyến tài</Space>
           </Dropdown>
           <Link href='#' className='text-base block py-2'>
             Thông tin - Sự kiện
@@ -115,7 +112,7 @@ const NavbarFooter = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default NavbarFooter
+export default NavbarFooter;

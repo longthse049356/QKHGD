@@ -1,12 +1,12 @@
-import React from 'react'
-import News from '@/components/News'
+import React from 'react';
+import News from '@/components/News';
 
 function Home() {
   return (
     <main className='min-h-screen mt-5'>
-        <News />
+      <News />
     </main>
-  )
+  );
 }
 
-export default Home
+export default Home;

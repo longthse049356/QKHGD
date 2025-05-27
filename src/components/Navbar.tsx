@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { MenuProps } from 'antd';
@@ -106,45 +106,209 @@ export const ROUTES = {
 
 const Navbar = () => {
   const { push } = useRouter();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const onClick = ({ key }: any) => {
     // @ts-ignore
     push(ROUTES[key]);
+    setIsMenuOpen(false);
   };
+
   const onClick2 = ({ key }: any) => {
     // @ts-ignore
     push(ROUTES[key]);
+    setIsMenuOpen(false);
   };
+
   return (
-    <nav className='bg-blue-500 border-gray-200 text-white'>
+    <nav
+      className={`bg-blue-500 border-gray-200 text-white sticky top-0 z-50 ${scrolled ? 'shadow-md' : ''}`}
+    >
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
         <Link
           href='/quy-che-quy-khuyen-hoc'
           className='flex items-center space-x-3 rtl:space-x-reverse'
         >
           <Image src='/logo.png' width={40} height={40} alt='logo' />
-          <span className='self-center text-2xl font-semibold whitespace-nowrap'>
+          <span className='self-center text-xl md:text-2xl font-semibold whitespace-nowrap'>
             Quỹ khuyến học
           </span>
         </Link>
 
-        <div className='hidden w-full md:block md:w-auto' id='navbar-default'>
-          <div className='flex gap-5 text-lg font-medium text-white'>
-            <Link href='/' className='text-base block py-2' aria-current='page'>
-              Trang chủ
-            </Link>
-            <Dropdown menu={{ items, onClick }}>
-              <Space className='text-base cursor-pointer'>Lịch sử họ Trần</Space>
-            </Dropdown>
-            <Dropdown menu={{ items: items2, onClick: onClick2 }}>
-              <Space className='text-base cursor-pointer'>Khuyến học khuyến tài</Space>
-            </Dropdown>
-            <Dropdown menu={{ items: items3, onClick: onClick2 }}>
-              <Space className='text-base cursor-pointer'>Thông tin - Sự kiện</Space>
-            </Dropdown>
+        {/* Mobile menu button */}
+        <button
+          type='button'
+          className='inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
+          aria-controls='navbar-default'
+          aria-expanded={isMenuOpen}
+          onClick={toggleMenu}
+        >
+          <span className='sr-only'>Open main menu</span>
+          <svg
+            className='w-6 h-6'
+            fill='currentColor'
+            viewBox='0 0 20 20'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            {isMenuOpen ? (
+              <path
+                fillRule='evenodd'
+                d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z'
+                clipRule='evenodd'
+              ></path>
+            ) : (
+              <path
+                fillRule='evenodd'
+                d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
+                clipRule='evenodd'
+              ></path>
+            )}
+          </svg>
+        </button>
+
+        {/* Desktop menu */}
+        <div
+          className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}
+          id='navbar-default'
+        >
+          <div className='flex flex-col md:flex-row md:items-center md:gap-5 text-lg font-medium text-white'>
+            <div className='md:flex md:items-center'>
+              <Link
+                href='/'
+                className='text-base block py-2 px-3 rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:p-0 md:py-0'
+                aria-current='page'
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Trang chủ
+              </Link>
+            </div>
+
+            {/* Desktop Dropdowns */}
+            <div className='hidden md:flex md:items-center'>
+              <Dropdown menu={{ items, onClick }}>
+                <Space className='text-base cursor-pointer'>Lịch sử họ Trần</Space>
+              </Dropdown>
+            </div>
+            <div className='hidden md:flex md:items-center'>
+              <Dropdown menu={{ items: items2, onClick: onClick2 }}>
+                <Space className='text-base cursor-pointer'>Khuyến học khuyến tài</Space>
+              </Dropdown>
+            </div>
+            <div className='hidden md:flex md:items-center'>
+              <Dropdown menu={{ items: items3, onClick: onClick2 }}>
+                <Space className='text-base cursor-pointer'>Thông tin - Sự kiện</Space>
+              </Dropdown>
+            </div>
+
+            {/* Mobile Dropdowns */}
+            <div className='md:hidden'>
+              <Accordion title='Lịch sử họ Trần' items={items} onClick={onClick} />
+              <Accordion title='Khuyến học khuyến tài' items={items2} onClick={onClick2} />
+              <Accordion title='Thông tin - Sự kiện' items={items3} onClick={onClick2} />
+            </div>
           </div>
         </div>
       </div>
     </nav>
+  );
+};
+
+// Accordion component for mobile menu
+const Accordion = ({
+  title,
+  items,
+  onClick,
+}: {
+  title: string;
+  items: MenuProps['items'];
+  onClick: any;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className='border-t border-blue-400 py-2'>
+      <button
+        className='w-full text-left flex justify-between items-center py-2 px-3'
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className='text-base font-medium'>{title}</span>
+        <svg
+          className={`w-4 h-4 transition-transform ${isOpen ? 'transform rotate-180' : ''}`}
+          fill='currentColor'
+          viewBox='0 0 20 20'
+        >
+          <path
+            fillRule='evenodd'
+            d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+            clipRule='evenodd'
+          ></path>
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div className='pl-4 mt-1'>
+          {items?.map((item) => {
+            if (!item) return null;
+
+            const menuItem = item as {
+              key?: React.Key;
+              label?: React.ReactNode;
+              children?: { key?: React.Key; label?: React.ReactNode }[];
+            };
+
+            return (
+              <React.Fragment key={menuItem?.key}>
+                <button
+                  className='block w-full text-left py-2 px-3 text-base hover:bg-blue-600 rounded'
+                  onClick={() => {
+                    onClick({ key: menuItem?.key });
+                    setIsOpen(false);
+                  }}
+                >
+                  {menuItem?.label}
+                </button>
+
+                {menuItem?.children && (
+                  <div className='pl-4'>
+                    {menuItem.children.map((child) => (
+                      <button
+                        key={child.key}
+                        className='block w-full text-left py-2 px-3 text-base hover:bg-blue-600 rounded'
+                        onClick={() => {
+                          onClick({ key: child.key });
+                          setIsOpen(false);
+                        }}
+                      >
+                        {child.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 };
 

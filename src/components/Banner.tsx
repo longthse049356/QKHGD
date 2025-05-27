@@ -4,17 +4,20 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className='bg-blue-600 flex items-center px-3 h-[270px]'>
-      <Link href='/' title='Home'>
-        <Image
-          className='w-full h-[270px]'
-          alt='quy khuyen hoc'
-          title='quy khuyen hoc'
-          src='/banner.png'
-          width={1500}
-          height={800}
-          quality={100}
-        />
+    <div className='bg-blue-600 flex items-center px-0 h-[270px] md:h-[270px] overflow-hidden'>
+      <Link href='/' title='Home' className='w-full'>
+        <div className='relative w-full h-[270px] md:h-[270px]'>
+          <Image
+            className='object-cover object-center'
+            alt='quy khuyen hoc'
+            title='quy khuyen hoc'
+            src='/banner.png'
+            priority
+            fill
+            sizes='(max-width: 768px) 100vw, 1500px'
+            quality={100}
+          />
+        </div>
       </Link>
     </div>
   );

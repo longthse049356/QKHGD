@@ -4,75 +4,45 @@ import Image from 'next/image';
 
 const LinkAddress =
   'https://www.google.com/maps/place/%C4%90%C3%ACnh+L%C3%A0ng+,+T%E1%BB%95+D%C3%A2n+Ph%E1%BB%91+%C4%90a+H%E1%BB%99i/@21.1227307,105.9197933,19z/data=!3m1!4b1!4m6!3m5!1s0x31350719dca03e1d:0x533ef7d2530516da!8m2!3d21.1227295!4d105.920437!16s%2Fg%2F11fnt9l_fh?hl=vi-VN&entry=ttu';
+
 const Footer = () => {
   return (
-    <section className='pt-10 pb-7 bg-blue-500'>
+    <section className='pt-6 md:pt-10 pb-5 md:pb-7 bg-blue-600'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div className='grid grid-cols-1 max-lg:gap-10 lg:grid-cols-12 lg:divide-x-2 border-gray-200'>
-          <div className='lg:col-span-7 pr-6'>
-            <h5 className='text-lg font-medium text-white max-md:text-center mb-7'>Liên hệ</h5>
-            <div className='flex gap-4 pb-6 border-b-2 border-gray-200'>
+        <div className='grid grid-cols-1 max-lg:gap-8 lg:grid-cols-12 lg:divide-x-2 lg:divide-blue-400 border-gray-200'>
+          <div className='lg:col-span-7 lg:pr-6'>
+            <h5 className='text-lg font-medium text-white text-center md:text-left mb-4 md:mb-7'>
+              Liên hệ
+            </h5>
+            <div className='flex flex-col md:flex-row gap-3 md:gap-4 pb-4 md:pb-6 border-b-2 border-blue-400'>
               <Link href={LinkAddress} className='flex items-center gap-2' target='_blank'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='20'
-                  height='20'
-                  viewBox='0 0 20 20'
-                  fill='none'
-                >
-                  <path
-                    d='M10.0002 1.83398C7.79102 1.83398 6.00016 3.62485 6.00016 5.83398C6.00016 7.81598 7.44169 9.46129 9.3335 9.77868V11.8438C8.15165 11.8773 6.58573 12.0034 5.21484 12.3198C4.3956 12.5089 3.59344 12.7773 2.98057 13.1696C2.3658 13.5632 1.8335 14.1587 1.8335 15.0007C1.8335 15.4261 2.03957 15.8389 2.35737 16.1901C2.68091 16.5477 3.15401 16.8824 3.78679 17.1701C5.05045 17.7444 7.02988 18.1673 10.0002 18.1673C11.2802 18.1673 13.2118 18.0404 14.8432 17.6489C15.6539 17.4543 16.4414 17.1828 17.0417 16.795C17.6411 16.4076 18.1668 15.8234 18.1668 15.0007C18.1668 14.3531 17.7301 13.63 16.8682 13.0593C15.9939 12.4806 14.6234 12.0086 12.5555 11.8363C12.1886 11.8057 11.8664 12.0784 11.8358 12.4453C11.8052 12.8122 12.0779 13.1344 12.4448 13.165C14.3769 13.326 15.5064 13.7569 16.1321 14.1711C16.7702 14.5936 16.8335 14.9538 16.8335 15.0007C16.8335 15.1779 16.7342 15.4062 16.318 15.6751C15.9026 15.9435 15.2839 16.172 14.5321 16.3524C13.0385 16.7109 11.2202 16.834 10.0002 16.834C7.13711 16.834 5.36654 16.4235 4.33853 15.9562C3.82549 15.723 3.51733 15.4848 3.34608 15.2956C3.18432 15.1168 3.16835 15.0108 3.16683 15.0007C3.16683 14.8009 3.27689 14.5631 3.69944 14.2926C4.1239 14.0209 4.75403 13.7945 5.51465 13.619C6.75956 13.3317 8.21367 13.2112 9.3335 13.1777V13.334C9.3335 13.7022 9.63197 14.0007 10.0002 14.0007C10.3684 14.0007 10.6668 13.7022 10.6668 13.334V9.77868C12.5586 9.46129 14.0002 7.81598 14.0002 5.83398C14.0002 3.62485 12.2093 1.83398 10.0002 1.83398Z'
-                    fill='#dddddd'
-                  />
-                </svg>
-                <p className='text-base font-normal text-white hover:text-blue-900'>
+                <span className='text-xl'>📍</span>
+                <p className='text-sm md:text-base font-normal text-white hover:text-blue-100'>
                   Đa Hội - Châu Khê - Từ Sơn - Bắc Ninh
                 </p>
               </Link>
               <div className='flex items-center gap-2'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='21'
-                  height='20'
-                  viewBox='0 0 21 20'
-                  fill='none'
-                >
-                  <path
-                    d='M7.18848 2.51372C6.28217 1.60741 4.81275 1.60741 3.90644 2.51372C2.03119 4.38896 2.03119 7.42934 3.90644 9.30459L11.3627 16.7609C13.238 18.6361 16.2784 18.6361 18.1536 16.7609C19.0599 15.8546 19.0599 14.3852 18.1536 13.4788L16.0824 11.4077C15.351 10.6763 14.1653 10.6763 13.4339 11.4077C13.2233 11.6183 12.8817 11.6183 12.671 11.4077L8.91853 7.65514C8.70787 7.44448 8.70787 7.10293 8.91853 6.89227C9.64989 6.1609 9.64989 4.97513 8.91853 4.24377L7.18848 2.51372Z'
-                    fill='#dddddd'
-                  />
-                </svg>
-                <p className='text-base font-normal text-white select-all'>093 8866779</p>
+                <span className='text-xl'>📞</span>
+                <p className='text-sm md:text-base font-normal text-white select-all'>
+                  093 8866779
+                </p>
               </div>
               <div className='flex items-center gap-2'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='17'
-                  height='16'
-                  viewBox='0 0 17 16'
-                  fill='none'
-                >
-                  <path
-                    d='M0.980369 2.24792C1.71093 1.28666 2.86648 0.666016 4.16699 0.666016H12.5003C13.7782 0.666016 14.9162 1.26527 15.6485 2.19809C15.6369 2.2106 15.6257 2.22364 15.615 2.23721L14.8684 3.18004L13.1551 5.20653C12.1329 6.41561 11.7452 6.85169 11.2425 7.08496C10.7399 7.31822 10.1565 7.33272 8.57326 7.33273H8.09451C6.51086 7.33271 5.92743 7.31822 5.42467 7.08486C4.92191 6.8515 4.53424 6.41525 3.51199 5.20572L1.80012 3.18021L1.79155 3.17028L0.980369 2.24792Z'
-                    fill='#dddddd'
-                  />
-                  <path
-                    d='M0.331033 3.52856C0.224291 3.88909 0.166992 4.27086 0.166992 4.66602V11.3327C0.166992 13.5418 1.95785 15.3327 4.16699 15.3327H12.5003C14.7095 15.3327 16.5003 13.5418 16.5003 11.3327V4.66602C16.5003 4.25643 16.4388 3.86122 16.3244 3.48914L15.9071 4.01614C15.9027 4.02173 15.8981 4.02725 15.8935 4.0327L14.0746 6.18411C13.1883 7.23323 12.6064 7.92194 11.8038 8.29441C11.0011 8.66689 10.0995 8.66657 8.7261 8.6661L7.94163 8.6661C6.56792 8.66657 5.66611 8.66688 4.86332 8.29426C4.06053 7.92164 3.47866 7.23268 2.5923 6.18317L0.786009 4.04589L0.331033 3.52856Z'
-                    fill='#dddddd'
-                  />
-                </svg>
-                <p className='text-base font-normal text-white select-all'>qkhgiapdong@gmail.com</p>
+                <span className='text-xl'>✉️</span>
+                <p className='text-sm md:text-base font-normal text-white select-all truncate'>
+                  qkhgiapdong@gmail.com
+                </p>
               </div>
             </div>
-            <div className='mt-4 flex items-center max-md:justify-center gap-5'>
+            <div className='mt-4 flex items-center justify-center md:justify-start gap-3 md:gap-5'>
               <Link
                 href='#'
-                className='p-2 text-black rounded-full transition-all duration-500 hover:bg-emerald-800 focus-within:bg-emerald-800 focus-within:outline-0 hover:text-white focus-within:text-white'
+                className='p-2 bg-white text-blue-600 rounded-full transition-all duration-500 hover:bg-blue-100 focus-within:bg-blue-100 focus-within:outline-0 hover:text-blue-700 focus-within:text-blue-700'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
+                  width='20'
+                  height='20'
                   viewBox='0 0 24 24'
                   fill='none'
                 >
@@ -84,12 +54,12 @@ const Footer = () => {
               </Link>
               <Link
                 href='#'
-                className='p-2 h-10 w-10 flex items-center justify-center text-black rounded-full transition-all duration-500 hover:bg-emerald-800 focus-within:outline-0 focus-within:bg-emerald-800 hover:text-white focus-within:text-white'
+                className='p-2 h-10 w-10 flex items-center justify-center bg-white text-blue-600 rounded-full transition-all duration-500 hover:bg-blue-100 focus-within:outline-0 focus-within:bg-blue-100 hover:text-blue-700 focus-within:text-blue-700'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  width='22'
-                  height='22'
+                  width='18'
+                  height='18'
                   viewBox='0 0 18 18'
                   fill='none'
                 >
@@ -129,29 +99,29 @@ const Footer = () => {
               </Link>
               <Link
                 href='#'
-                className='p-2 text-black rounded-full transition-all duration-500 hover:bg-emerald-800 focus-within:bg-emerald-800 focus-within:outline-0 hover:text-white focus-within:text-white'
+                className='p-2 bg-white text-blue-600 rounded-full transition-all duration-500 hover:bg-blue-100 focus-within:bg-blue-100 focus-within:outline-0 hover:text-blue-700 focus-within:text-blue-700'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
+                  width='20'
+                  height='20'
                   viewBox='0 0 24 24'
                   fill='none'
                 >
                   <path
-                    d='M15.4977 12.8803L15.9326 10.1198H13.2539V8.32546C13.2539 7.57064 13.6278 6.83307 14.8237 6.83307H16.0587V4.48234C15.3395 4.36776 14.6128 4.30577 13.8844 4.29688C11.6797 4.29687 10.2403 5.62104 10.2403 8.0149V10.1198H7.79639V12.8803H10.2403V19.5572H13.2539V12.8803H15.4977Z'
+                    d='M15.4977 10.7242L15.9326 10.1198H13.2539V8.32546C13.2539 7.57064 13.6278 6.83307 14.8237 6.83307H16.0587V4.48234C15.3395 4.36776 14.6128 4.30577 13.8844 4.29688C11.6797 4.29687 10.2403 5.62104 10.2403 8.0149V10.1198H7.79639V12.8803H10.2403V19.5572H13.2539V12.8803H15.4977Z'
                     fill='currentColor'
                   />
                 </svg>
               </Link>
               <Link
                 href='#'
-                className='p-2 text-black group rounded-full transition-all duration-500 hover:bg-emerald-800 focus-within:bg-emerald-800 focus-within:outline-0 hover:text-white focus-within:text-white'
+                className='p-2 bg-white text-blue-600 group rounded-full transition-all duration-500 hover:bg-blue-100 focus-within:bg-blue-100 focus-within:outline-0 hover:text-blue-700 focus-within:text-blue-700'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
+                  width='20'
+                  height='20'
                   viewBox='0 0 24 24'
                   fill='none'
                 >
@@ -160,7 +130,7 @@ const Footer = () => {
                     fill='currentColor'
                   />
                   <path
-                    className='fill-white transition-all divide-gray-500 group-hover:fill-emerald-800 group-focus-within:fill-emerald-800'
+                    className='fill-white transition-all divide-gray-500 group-hover:fill-blue-100 group-focus-within:fill-blue-100'
                     d='M10.2939 14.7206L14.8132 12.1041L10.2939 9.48767V14.7206Z'
                     fill=''
                   />
@@ -169,18 +139,20 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='lg:col-span-5  pl-6 col-start-1'>
-            <Link
-              href='https://pagedone.io/'
-              className='mb-2 flex gap-3 hover:text-blue-600 text-gray-900'
-            >
-              <Image src='/logo.png' width={40} height={40} alt='logo' />
-              <p className='flex-1 text-4xl text-white'>Giáp Đông</p>
-            </Link>
-            <p className='text-base font-normal text-white max-md:text-center mb-3 mt-2'>
+          <div className='lg:col-span-5 lg:pl-6 col-start-1'>
+            <div className='flex items-center justify-center md:justify-start mb-4'>
+              <Link
+                href='https://pagedone.io/'
+                className='flex gap-3 hover:text-blue-200 text-gray-900'
+              >
+                <Image src='/logo.png' width={36} height={36} alt='logo' />
+                <p className='flex-1 text-2xl md:text-4xl text-white'>Giáp Đông</p>
+              </Link>
+            </div>
+            <p className='text-sm md:text-base font-normal text-white text-center md:text-left mb-3 mt-2'>
               Đăng ký nhận bản tin độc quyền của chúng tôi để biết thông tin cập nhật mới nhất
             </p>
-            <div className='relative max-w-xs max-md:max-w-full max-md:mx-auto  text-gray-500 focus-within:text-gray-900 mb-5'>
+            <div className='relative mx-auto md:mx-0 max-w-xs md:max-w-sm text-gray-500 focus-within:text-gray-900 mb-4 md:mb-5'>
               <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -191,7 +163,7 @@ const Footer = () => {
                 >
                   <path
                     d='M2.95739 5.61072L6.47281 7.80147C8.18826 8.87052 9.04599 9.40504 9.99991 9.40489C10.9538 9.40474 11.8114 8.86994 13.5265 7.80035L17.0509 5.60245M9.16667 16.6663H10.8333C13.976 16.6663 15.5474 16.6663 16.5237 15.69C17.5 14.7137 17.5 13.1424 17.5 9.99967C17.5 6.85698 17.5 5.28563 16.5237 4.30932C15.5474 3.33301 13.976 3.33301 10.8333 3.33301H9.16667C6.02397 3.33301 4.45262 3.33301 3.47631 4.30932C2.5 5.28563 2.5 6.85698 2.5 9.99967C2.5 13.1424 2.5 14.7137 3.47631 15.69C4.45262 16.6663 6.02397 16.6663 9.16667 16.6663Z'
-                    stroke='#111827'
+                    stroke='white'
                     strokeWidth='1.6'
                     strokeLinecap='round'
                     strokeLinejoin='round'
@@ -201,18 +173,23 @@ const Footer = () => {
               <input
                 type='text'
                 id='default-search'
-                className='block w-full md:max-w-xs pr-4 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-white focus:outline-none leading-relaxed'
+                className='block w-full pr-4 pl-12 py-2.5 text-sm md:text-base font-normal shadow-xs text-white bg-transparent border border-blue-400 rounded-full placeholder-blue-200 focus:outline-none focus:border-white leading-relaxed'
                 placeholder='mail@gmail.com'
               />
             </div>
-            <button className='py-2.5 px-7 rounded-full flex items-center justify-center bg-emerald-800 text-base font-semibold text-white mb-3 transition-all duration-500 hover:bg-emerald-900'>
-              Đăng ký
-            </button>
+            <div className='flex justify-center md:justify-start'>
+              <button className='py-2 md:py-2.5 px-5 md:px-7 rounded-full flex items-center justify-center bg-white text-blue-600 text-sm md:text-base font-semibold mb-3 transition-all duration-500 hover:bg-blue-100 hover:text-blue-700'>
+                Đăng ký
+              </button>
+            </div>
           </div>
         </div>
-        <div className='flex items-center justify-center pt-7'>
-          <p className='text-sm font-normal text-white'>
-            <Link href='#'>©GiapDong</Link> 2024, All rights reserved.
+        <div className='flex items-center justify-center pt-5 md:pt-7'>
+          <p className='text-xs md:text-sm font-normal text-white text-center'>
+            <Link href='#' className='hover:text-blue-200'>
+              ©GiapDong
+            </Link>{' '}
+            2024, All rights reserved.
           </p>
         </div>
       </div>

@@ -14,96 +14,132 @@ import Image from 'next/image';
 
 const Page = () => {
   return (
-    <div className='w-[900px] mx-auto'>
-      <p className='text-2xl text-center font-semibold'>Ảnh nội tự và ngoại cảnh</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image1}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center'>Ảnh chụp 1</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image2}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 2</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image3}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 3</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image4}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 4</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image5}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 5</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image6}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 6</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image7}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 7</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image8}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 8</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image9}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 9</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image10}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 10</p>
-      <Image
-        className='mt-6 border rounded'
-        src={Image11}
-        width={900}
-        height={500}
-        alt='slider-image'
-      />
-      <p className='text-center mb-3'>Ảnh chụp 11</p>
+    <div className='w-full max-w-[900px] px-4 sm:px-6 mx-auto'>
+      <h1 className='text-2xl md:text-3xl text-center font-semibold my-6'>
+        Ảnh nội tự và ngoại cảnh
+      </h1>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image1}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 1'
+          priority
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 1</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image2}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 2'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 2</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image3}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 3'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 3</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image4}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 4'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 4</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image5}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 5'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 5</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image6}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 6'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 6</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image7}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 7'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 7</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image8}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 8'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 8</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image9}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 9'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 9</p>
+      </div>
+
+      <div className='mb-6'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image10}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 10'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 10</p>
+      </div>
+
+      <div className='mb-10'>
+        <Image
+          className='w-full h-auto border rounded-md shadow-sm'
+          src={Image11}
+          width={900}
+          height={500}
+          alt='Nội tự và ngoại cảnh 11'
+        />
+        <p className='text-center mt-2 text-gray-700'>Ảnh chụp 11</p>
+      </div>
     </div>
   );
 };

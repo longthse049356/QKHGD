@@ -26,382 +26,382 @@ import Image from 'next/image';
 
 const Page = () => {
   return (
-    <div className='w-[900px] mx-auto'>
-      <p className='text-2xl text-center font-semibold'>Ảnh câu đối</p>
+    <div className='w-full max-w-[900px] px-4 sm:px-6 mx-auto'>
+      <h1 className='text-2xl md:text-3xl text-center font-semibold mt-6 mb-4'>Ảnh câu đối</h1>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image1}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 1'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center'>Ảnh chụp 1</p>
+      <p className='text-center my-2'>Ảnh chụp 1</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image2}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 2'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 2</p>
+      <p className='text-center my-2'>Ảnh chụp 2</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image3}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 3'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 3</p>
+      <p className='text-center my-2'>Ảnh chụp 3</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image4}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 4'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 4</p>
+      <p className='text-center my-2'>Ảnh chụp 4</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image5}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 5'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 5</p>
+      <p className='text-center my-2'>Ảnh chụp 5</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image6}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 6'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 6</p>
+      <p className='text-center my-2'>Ảnh chụp 6</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image7}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 7'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 7</p>
+      <p className='text-center my-2'>Ảnh chụp 7</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image8}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 8'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 8</p>
+      <p className='text-center my-2'>Ảnh chụp 8</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image9}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 9'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 9</p>
+      <p className='text-center my-2'>Ảnh chụp 9</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image10}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 10'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 10</p>
+      <p className='text-center my-2'>Ảnh chụp 10</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image11}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 11'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 11</p>
+      <p className='text-center my-2'>Ảnh chụp 11</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image12}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 12'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 12</p>
+      <p className='text-center my-2'>Ảnh chụp 12</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image13}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 13'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 13</p>
+      <p className='text-center my-2'>Ảnh chụp 13</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image14}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 14'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 14</p>
+      <p className='text-center my-2'>Ảnh chụp 14</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image15}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 15'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 15</p>
+      <p className='text-center my-2'>Ảnh chụp 15</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image16}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 16'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 16</p>
+      <p className='text-center my-2'>Ảnh chụp 16</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image17}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 17'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 17</p>
+      <p className='text-center my-2'>Ảnh chụp 17</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image18}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 18'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 18</p>
+      <p className='text-center my-2'>Ảnh chụp 18</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image19}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 19'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 19</p>
+      <p className='text-center my-2'>Ảnh chụp 19</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image20}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 20'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 20</p>
+      <p className='text-center my-2'>Ảnh chụp 20</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image21}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 21'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 21</p>
+      <p className='text-center my-2'>Ảnh chụp 21</p>
       <div className='relative'>
         <Image
-          className='mt-6 border rounded'
+          className='mt-6 border rounded w-full h-auto'
           src={Image22}
           width={900}
           height={500}
-          alt='slider-image'
+          alt='Câu đối số 22'
         />
         <Image
-          className='absolute top-0 left-0 w-48'
+          className='absolute top-0 left-0 w-24 sm:w-32 md:w-48'
           src={DauAn}
           width={300}
           height={300}
-          alt='slider-image'
+          alt='Dấu ấn'
         />
       </div>
-      <p className='text-center mb-3'>Ảnh chụp 22</p>
+      <p className='text-center my-2 mb-10'>Ảnh chụp 22</p>
     </div>
   );
 };

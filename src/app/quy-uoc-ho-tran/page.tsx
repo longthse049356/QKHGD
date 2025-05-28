@@ -9,13 +9,20 @@ const Page = async () => {
   // Sử dụng fs để đọc file
   const htmlContent = fs.readFileSync(filePath, 'utf8');
   return (
-    <div className='w-[700px] mx-auto'>
-      <p className='font-sans text-2xl text-center font-semibold'>Ảnh bìa quy ước</p>
-      <div className='flex justify-center mb-4'>
-        <Image className='mt-6' src={Image1} width={600} height={300} alt='slider-image' />
+    <div className='w-full max-w-[700px] px-4 sm:px-6 mx-auto my-6'>
+      <h1 className='text-2xl md:text-3xl text-center font-semibold mb-6'>Quy ước họ Trần</h1>
+      <div className='flex justify-center mb-6'>
+        <Image
+          className='w-full max-w-[600px] h-auto rounded-md shadow-sm'
+          src={Image1}
+          width={600}
+          height={300}
+          alt='Ảnh bìa quy ước họ Trần'
+          priority
+        />
       </div>
       <div
-        className='font-sans bg-slate-100 p-4 rounded-md'
+        className='font-sans bg-slate-100 p-4 rounded-md shadow-sm'
         dangerouslySetInnerHTML={{ __html: htmlContent }}
       />
     </div>

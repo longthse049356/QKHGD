@@ -27,78 +27,223 @@ import Image from 'next/image';
 
 const Page = () => {
   return (
-    <div className='w-[1024px] mx-auto'>
+    <div className='w-full max-w-[1024px] px-4 sm:px-6 mx-auto'>
+      <h1 className='text-2xl font-bold text-center my-6'>Ảnh Trao Thưởng</h1>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image1} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image1}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 1'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image2} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image2}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 2'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image3} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image3}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 3'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image4} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image4}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 4'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image5} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image5}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 5'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image6} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image6}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 6'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image7} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image7}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 7'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image8} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image8}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 8'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image9} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image9}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 9'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image10} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image10}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 10'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image11} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image11}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 11'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image12} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image12}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 12'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image13} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image13}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 13'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image14} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image14}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 14'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image15} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image15}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 15'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image16} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image16}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 16'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image17} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image17}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 17'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image18} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image18}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 18'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image19} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image19}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 19'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image20} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image20}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 20'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image21} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image21}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 21'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image22} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image22}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 22'
+        />
       </div>
       <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image23} width={800} height={500} alt='slider-image' />
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image23}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 23'
+        />
       </div>
-      <div className='flex items-center flex-col'>
-        <Image className='mt-6' src={Image24} width={800} height={500} alt='slider-image' />
+      <div className='flex items-center flex-col mb-10'>
+        <Image
+          className='mt-6 w-full h-auto'
+          src={Image24}
+          width={800}
+          height={500}
+          alt='Ảnh trao thưởng 24'
+        />
       </div>
     </div>
   );

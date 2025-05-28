@@ -17,39 +17,41 @@ import Image15 from '@/asset/so-ghi-cong-duc/15.jpg';
 import Image from 'next/image';
 
 const Page = () => {
+  const images = [
+    { image: Image1, alt: 'Sổ ghi công đức 1', caption: 'Ảnh chụp 1' },
+    { image: Image2, alt: 'Sổ ghi công đức 2', caption: 'Ảnh chụp 2' },
+    { image: Image15, alt: 'Sổ ghi công đức 3', caption: 'Ảnh chụp 3' },
+    { image: Image14, alt: 'Sổ ghi công đức 4', caption: 'Ảnh chụp 4' },
+    { image: Image13, alt: 'Sổ ghi công đức 5', caption: 'Ảnh chụp 5' },
+    { image: Image12, alt: 'Sổ ghi công đức 6', caption: 'Ảnh chụp 6' },
+    { image: Image11, alt: 'Sổ ghi công đức 7', caption: 'Ảnh chụp 7' },
+    { image: Image10, alt: 'Sổ ghi công đức 8', caption: 'Ảnh chụp 8' },
+    { image: Image9, alt: 'Sổ ghi công đức 9', caption: 'Ảnh chụp 9' },
+    { image: Image8, alt: 'Sổ ghi công đức 10', caption: 'Ảnh chụp 10' },
+    { image: Image7, alt: 'Sổ ghi công đức 11', caption: 'Ảnh chụp 11' },
+    { image: Image6, alt: 'Sổ ghi công đức 12', caption: 'Ảnh chụp 12' },
+    { image: Image5, alt: 'Sổ ghi công đức 13', caption: 'Ảnh chụp 13' },
+    { image: Image4, alt: 'Sổ ghi công đức 14', caption: 'Ảnh chụp 14' },
+    { image: Image3, alt: 'Sổ ghi công đức 15', caption: 'Ảnh chụp 15' },
+  ];
+
   return (
-    <div className='w-[900px] mx-auto'>
-      <p className='text-2xl text-center font-semibold'>Ảnh sổ ghi công đức</p>
-      <Image className='mt-6' src={Image1} width={900} height={500} alt='slider-image' />
-      <p className='text-center'>Ảnh chụp 1</p>
-      <Image className='mt-6' src={Image2} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 2</p>
-      <Image className='mt-6' src={Image15} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 3</p>
-      <Image className='mt-6' src={Image14} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 4</p>
-      <Image className='mt-6' src={Image13} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 5</p>
-      <Image className='mt-6' src={Image12} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 6</p>
-      <Image className='mt-6' src={Image11} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 7</p>
-      <Image className='mt-6' src={Image10} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 8</p>
-      <Image className='mt-6' src={Image9} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 9</p>
-      <Image className='mt-6' src={Image8} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 10</p>
-      <Image className='mt-6' src={Image7} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 11</p>
-      <Image className='mt-6' src={Image6} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 12</p>
-      <Image className='mt-6' src={Image5} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 13</p>
-      <Image className='mt-6' src={Image4} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 14</p>
-      <Image className='mt-6' src={Image3} width={900} height={500} alt='slider-image' />
-      <p className='text-center mb-3'>Ảnh chụp 15</p>
+    <div className='w-full max-w-[900px] px-4 sm:px-6 mx-auto'>
+      <h1 className='text-2xl md:text-3xl text-center font-semibold my-6'>Sổ ghi công đức</h1>
+
+      {images.map((item, index) => (
+        <div key={index} className={index === images.length - 1 ? 'mb-10' : 'mb-6'}>
+          <Image
+            className='w-full h-auto border rounded-md shadow-sm'
+            src={item.image}
+            width={900}
+            height={500}
+            alt={item.alt}
+            priority={index === 0}
+          />
+          <p className='text-center mt-2 text-gray-700'>{item.caption}</p>
+        </div>
+      ))}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className='bg-blue-600 flex items-center px-0 h-[270px] md:h-[270px] overflow-hidden'>
+    <div className='bg-gradient-to-r from-slate-700 via-blue-700 to-indigo-700 flex items-center px-0 h-[270px] md:h-[270px] overflow-hidden'>
       <Link href='/' title='Home' className='w-full'>
         <div className='relative w-full h-[270px] md:h-[270px]'>
           <Image

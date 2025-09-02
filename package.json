@@ -11,6 +11,8 @@
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/swiper": "^5.4.3",
     "antd": "^5.20.4",
     "clsx": "^2.1.1",
     "next": "14.0.4",
@@ -19,6 +21,7 @@
     "react-slick": "^0.30.2",
     "sharp": "0.33.1",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.10",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {

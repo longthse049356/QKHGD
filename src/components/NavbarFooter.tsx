@@ -94,7 +94,7 @@ const NavbarFooter = () => {
     push(ROUTES[key]);
   };
   return (
-    <nav className='hidden md:block bg-blue-700 border-gray-200 text-white'>
+          <nav className='hidden md:block bg-gradient-to-r from-slate-600 via-blue-600 to-indigo-600 border-gray-200 text-white'>
       <div className='max-w-screen-xl mx-auto py-2 px-4' id='navbar-default'>
         <div className='flex gap-5 text-lg font-medium text-white'>
           <Link href='/' className='text-base block py-2' aria-current='page'>

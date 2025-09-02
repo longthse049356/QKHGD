@@ -1,0 +1,31 @@
+{
+  "articles": [
+    {
+      "title": "Mức thưởng quỹ khuyến học của quỹ năm 2025",
+      "thumbnail": "thumbnails/1755489708049_Screenshot 2025-08-14 at 16.50.39.png",
+      "content": "html/1755489708050_mucthuongkhuyenhoc2 2.html",
+      "id": 4,
+      "createdAt": "2025-08-18T04:01:48.050Z",
+      "updatedAt": "2025-08-18T04:01:48.050Z"
+    },
+    {
+      "title": "Nhan 100k tu chinh phu",
+      "thumbnail": "thumbnails/1756701754693_z6919051074527_9f8d5a9a4e1222b3ebf7caad49cb01ae.jpg",
+      "content": "html/1756701754694_mucthuongkhuyenhoc2 2.html",
+      "id": 5,
+      "createdAt": "2025-09-01T04:42:34.694Z",
+      "updatedAt": "2025-09-01T04:42:34.694Z"
+    },
+    {
+      "title": "Khuyến học khuyến tài 2025",
+      "thumbnail": "thumbnails/1756810867466_image (10).png",
+      "content": "html/1756810867467_mucthuongkhuyenhoc2 2.html",
+      "id": 6,
+      "createdAt": "2025-09-02T11:01:07.468Z",
+      "updatedAt": "2025-09-02T11:01:07.468Z"
+    }
+  ],
+  "lastId": 6,
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2025-09-02T11:01:07.468Z"
+}

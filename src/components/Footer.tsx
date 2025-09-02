@@ -7,7 +7,7 @@ const LinkAddress =
 
 const Footer = () => {
   return (
-    <section className='pt-6 md:pt-10 pb-5 md:pb-7 bg-blue-600'>
+    <section className='pt-6 md:pt-10 pb-5 md:pb-7 bg-gradient-to-r from-slate-700 via-blue-700 to-indigo-700'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 max-lg:gap-8 lg:grid-cols-12 lg:divide-x-2 lg:divide-blue-400 border-gray-200'>
           <div className='lg:col-span-7 lg:pr-6'>

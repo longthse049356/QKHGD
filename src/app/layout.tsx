@@ -32,7 +32,9 @@ export default function RootLayout({
       <body className={cn('min-h-screen font-sans', fontSans.variable)}>
         <Banner />
         <Navbar />
-        <div className='pb-10 bg-gradient-to-br from-slate-200 via-blue-200 to-indigo-200 min-h-screen'>{children}</div>
+        <div className='pb-10 bg-gradient-to-br from-slate-200 via-blue-200 to-indigo-200 min-h-screen'>
+          {children}
+        </div>
         <NavbarFooter />
         <Footer />
       </body>

@@ -26,7 +26,7 @@ import anh10 from '@/asset/tinified/anh-10.jpg';
 
 const ImageSlider = () => {
   const swiperRef = useRef<SwiperType>();
-  
+
   const images = [
     { src: anh1, alt: 'Lễ tuyên dương trao thưởng khuyến học' },
     { src: anh2, alt: 'Hoạt động khuyến học khuyến tài' },
@@ -48,7 +48,7 @@ const ImageSlider = () => {
             Hình ảnh hoạt động Quy Khuyến học
           </h3>
         </div>
-        
+
         <div className='relative h-[280px] md:h-[320px] overflow-hidden'>
           <Swiper
             onBeforeInit={(swiper) => {
@@ -69,7 +69,7 @@ const ImageSlider = () => {
               delay: 4000,
               disableOnInteraction: false,
             }}
-            effect="slide"
+            effect='slide'
             speed={800}
             loop={true}
             navigation={{
@@ -106,14 +106,19 @@ const ImageSlider = () => {
 
           {/* Custom Navigation */}
           <button className='swiper-button-prev-custom absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1.5 rounded-full hover:bg-opacity-75 transition-all duration-300 z-10'>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M15 19l-7-7 7-7'
+              />
             </svg>
           </button>
-          
+
           <button className='swiper-button-next-custom absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1.5 rounded-full hover:bg-opacity-75 transition-all duration-300 z-10'>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
             </svg>
           </button>
 
@@ -130,7 +135,7 @@ const ImageSlider = () => {
           opacity: 1;
           margin: 0 4px;
         }
-        
+
         .swiper-pagination-custom .swiper-pagination-bullet-active-custom {
           background: white;
         }
@@ -139,4 +144,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider; 
+export default ImageSlider;

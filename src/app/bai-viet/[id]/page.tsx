@@ -11,24 +11,20 @@ async function getArticle(id: string) {
         cache: 'no-store',
       },
     );
-    
+
     if (!response.ok) {
       if (response.status === 404) {
         return null;
       }
       throw new Error('Failed to fetch article');
     }
-    
+
     const data = await response.json();
     return data.article;
   } catch (error) {
     return null;
   }
 }
-
-
-
-
 
 export default async function Page({ params }: { params: { id: string } }) {
   const article = await getArticle(params.id);
@@ -80,7 +76,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-            {/* Article content */}
+      {/* Article content */}
       <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
         <div className='p-6'>
           <h2 className='text-xl font-semibold text-gray-800 mb-4'>Nội dung bài viết</h2>

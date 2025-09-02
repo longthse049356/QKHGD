@@ -141,7 +141,7 @@ const Navbar = () => {
 
   return (
     <nav
-              className={`bg-gradient-to-r from-slate-600 via-blue-600 to-indigo-600 border-gray-200 text-white sticky top-0 z-50 ${scrolled ? 'shadow-md' : ''}`}
+      className={`bg-gradient-to-r from-slate-600 via-blue-600 to-indigo-600 border-gray-200 text-white sticky top-0 z-50 ${scrolled ? 'shadow-md' : ''}`}
     >
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
         <Link

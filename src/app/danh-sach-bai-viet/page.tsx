@@ -17,7 +17,7 @@ interface Article {
   id: number;
   title: string;
   thumbnail: string;
-  document: string;
+  content: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -86,8 +86,10 @@ const DanhSachBaiVietPage = () => {
     });
   };
 
+  const resolveSrc = (p: string) => (p?.startsWith('http') ? p : `/${p}`);
+
   const handleImagePreview = (imagePath: string) => {
-    setPreviewImage(imagePath);
+    setPreviewImage(resolveSrc(imagePath));
     setPreviewVisible(true);
   };
 
@@ -167,9 +169,9 @@ const DanhSachBaiVietPage = () => {
                     <div className='relative h-48 overflow-hidden'>
                       <Image
                         alt={article.title}
-                        src={`/${article.thumbnail}`}
+                        src={resolveSrc(article.thumbnail)}
                         className='w-full h-full object-cover cursor-pointer'
-                        onClick={() => handleImagePreview(`/${article.thumbnail}`)}
+                        onClick={() => handleImagePreview(article.thumbnail)}
                         preview={false}
                       />
                       <div className='absolute top-2 right-2'>
@@ -184,7 +186,7 @@ const DanhSachBaiVietPage = () => {
                       key='view'
                       type='text'
                       icon={<EyeOutlined />}
-                      onClick={() => handleImagePreview(`/${article.thumbnail}`)}
+                      onClick={() => handleImagePreview(article.thumbnail)}
                       className='text-blue-500 hover:text-blue-600'
                     >
                       Xem ảnh
@@ -193,11 +195,11 @@ const DanhSachBaiVietPage = () => {
                       key='download'
                       type='text'
                       icon={<DownloadOutlined />}
-                      href={`/${article.document}`}
+                      href={resolveSrc(article.content)}
                       download
                       className='text-green-500 hover:text-green-600'
                     >
-                      Tải DOCX
+                      Tải HTML
                     </Button>,
                     <Button
                       key='delete'

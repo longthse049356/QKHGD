@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { addArticle, saveUploadedFile } from '@/lib/database';
+import { addArticle, saveUploadedFile, getAllArticles } from '@/lib/database';
 
 export async function POST(request: NextRequest) {
   try {
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     const contentBuffer = Buffer.from(await contentFile.arrayBuffer());
 
     // Lưu files
-    const thumbnailPath = saveUploadedFile(
+    const thumbnailPath = await saveUploadedFile(
       {
         originalname: thumbnailFile.name,
         buffer: thumbnailBuffer,
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
       'thumbnail',
     );
 
-    const contentPath = saveUploadedFile(
+    const contentPath = await saveUploadedFile(
       {
         originalname: contentFile.name,
         buffer: contentBuffer,
@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
     );
 
     // Lưu vào database
-    const newArticle = addArticle({
+    const newArticle = await addArticle({
       title,
       thumbnail: thumbnailPath,
       content: contentPath,
@@ -78,8 +78,7 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   try {
-    const { getAllArticles } = await import('@/lib/database');
-    const articles = getAllArticles();
+    const articles = await getAllArticles();
 
     return NextResponse.json({
       success: true,

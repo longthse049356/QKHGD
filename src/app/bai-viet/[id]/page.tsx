@@ -33,6 +33,8 @@ export default async function Page({ params }: { params: { id: string } }) {
     notFound();
   }
 
+  const resolveSrc = (p: string) => (p?.startsWith('http') ? p : `/${p}`);
+
   return (
     <div className='w-full max-w-4xl mx-auto px-4 sm:px-6 py-6'>
       {/* Back button */}
@@ -55,7 +57,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       <div className='bg-white rounded-xl shadow-lg overflow-hidden mb-8'>
         <div className='relative h-64 md:h-80'>
           <Image
-            src={`/${article.thumbnail}`}
+            src={resolveSrc(article.thumbnail)}
             alt={article.title}
             fill
             className='object-cover'
@@ -82,7 +84,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           <h2 className='text-xl font-semibold text-gray-800 mb-4'>Nội dung bài viết</h2>
           <div className='border border-gray-200 rounded-lg overflow-hidden'>
             <iframe
-              src={`/${article.content}`}
+              src={resolveSrc(article.content)}
               className='w-full border-0'
               style={{ minHeight: '2500px', height: 'auto' }}
               title={article.title}

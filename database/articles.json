@@ -23,9 +23,17 @@
       "id": 6,
       "createdAt": "2025-09-02T11:01:07.468Z",
       "updatedAt": "2025-09-02T11:01:07.468Z"
+    },
+    {
+      "title": "Đây là một bài viết mới của năm 2025",
+      "thumbnail": "thumbnails/1757209647242_z6919051074527_9f8d5a9a4e1222b3ebf7caad49cb01ae.jpg",
+      "content": "html/1757209647243_mucthuongkhuyenhoc2 2.html",
+      "id": 7,
+      "createdAt": "2025-09-07T01:47:27.243Z",
+      "updatedAt": "2025-09-07T01:47:27.243Z"
     }
   ],
-  "lastId": 6,
+  "lastId": 7,
   "createdAt": "2024-01-01T00:00:00.000Z",
-  "updatedAt": "2025-09-02T11:01:07.468Z"
+  "updatedAt": "2025-09-07T01:47:27.243Z"
 }

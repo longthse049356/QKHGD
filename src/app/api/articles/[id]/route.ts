@@ -9,7 +9,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       return NextResponse.json({ error: 'ID bài viết không hợp lệ' }, { status: 400 });
     }
 
-    const article = getArticleById(articleId);
+    const article = await getArticleById(articleId);
 
     if (!article) {
       return NextResponse.json({ error: 'Không tìm thấy bài viết' }, { status: 404 });
@@ -33,7 +33,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
       return NextResponse.json({ error: 'ID bài viết không hợp lệ' }, { status: 400 });
     }
 
-    const success = deleteArticle(articleId);
+    const success = await deleteArticle(articleId);
 
     if (!success) {
       return NextResponse.json({ error: 'Không tìm thấy bài viết để xóa' }, { status: 404 });

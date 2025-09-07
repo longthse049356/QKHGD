@@ -9,7 +9,7 @@ interface Article {
   id: number;
   title: string;
   thumbnail: string;
-  document: string;
+  content: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -44,6 +44,8 @@ const News = () => {
 
     fetchArticles();
   }, []);
+
+  const resolveSrc = (p: string) => (p?.startsWith('http') ? p : `/${p}`);
 
   const truncateTitle = (title: string, maxLength: number = 60) => {
     return title.length > maxLength ? title.substring(0, maxLength) + '...' : title;
@@ -93,7 +95,7 @@ const News = () => {
             >
               <Image
                 className='h-[60px] w-[100px] object-cover rounded'
-                src={`/${article.thumbnail}`}
+                src={resolveSrc(article.thumbnail)}
                 width={100}
                 height={60}
                 alt={article.title}
@@ -133,7 +135,7 @@ const News = () => {
               />
               <Image
                 className='h-[70px] w-[100px] md:w-[120px] object-cover flex-shrink-0'
-                src={`/${article.thumbnail}`}
+                src={resolveSrc(article.thumbnail)}
                 width={120}
                 height={70}
                 alt={article.title}

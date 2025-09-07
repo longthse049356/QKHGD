@@ -34,6 +34,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   }
 
   const resolveSrc = (p: string) => (p?.startsWith('http') ? p : `/${p}`);
+  const iframeSrc = article.content.startsWith('http')
+    ? `/api/proxy-blob?url=${encodeURIComponent(article.content)}`
+    : `/${article.content}`;
 
   return (
     <div className='w-full max-w-4xl mx-auto px-4 sm:px-6 py-6'>
@@ -84,7 +87,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           <h2 className='text-xl font-semibold text-gray-800 mb-4'>Nội dung bài viết</h2>
           <div className='border border-gray-200 rounded-lg overflow-hidden'>
             <iframe
-              src={resolveSrc(article.content)}
+              src={iframeSrc}
               className='w-full border-0'
               style={{ minHeight: '2500px', height: 'auto' }}
               title={article.title}

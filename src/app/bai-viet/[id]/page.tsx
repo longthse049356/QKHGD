@@ -2,30 +2,14 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-
-async function getArticle(id: string) {
-  try {
-    const response = await fetch(`/api/articles/${id}`, {
-      cache: 'no-store',
-      next: { revalidate: 0 },
-    });
-
-    if (!response.ok) {
-      if (response.status === 404) {
-        return null;
-      }
-      throw new Error('Failed to fetch article');
-    }
-
-    const data = await response.json();
-    return data.article;
-  } catch (error) {
-    return null;
-  }
-}
+import { getArticleById } from '@/lib/database';
 
 export default async function Page({ params }: { params: { id: string } }) {
-  const article = await getArticle(params.id);
+  const numericId = Number(params.id);
+  if (!Number.isFinite(numericId)) {
+    notFound();
+  }
+  const article = await getArticleById(numericId);
 
   if (!article) {
     notFound();

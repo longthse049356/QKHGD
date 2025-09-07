@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import React from 'react';
-import { Inter as FontSans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import favicon from '../../public/favicon.ico';
 import 'slick-carousel/slick/slick.css';
@@ -11,10 +10,7 @@ import Navbar from '@/components/Navbar';
 import NavbarFooter from '@/components/NavbarFooter';
 import Footer from '@/components/Footer';
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
+// Removed next/font usage temporarily to avoid dev CSS plugin error
 
 export const metadata: Metadata = {
   title: 'Quỹ khuyến học Giáp Đông',
@@ -29,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={cn('min-h-screen font-sans', fontSans.variable)}>
+      <body className={cn('min-h-screen font-sans')}>
         <Banner />
         <Navbar />
         <div className='pb-10 bg-gradient-to-br from-slate-200 via-blue-200 to-indigo-200 min-h-screen'>

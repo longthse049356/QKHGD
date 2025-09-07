@@ -32,6 +32,41 @@ const DB_BLOB_PREFIX = 'articles/index';
 
 const isVercel = !!process.env.VERCEL;
 const useBlobStorage = isVercel || !!process.env.BLOB_READ_WRITE_TOKEN;
+const useMongo = !!process.env.MONGODB_URI;
+
+const getMongoDb = async () => {
+  const { default: clientPromise } = await import('./mongodb');
+  const client = await clientPromise;
+  const dbName = process.env.MONGODB_DB || 'QKHGD';
+  return client.db(dbName);
+};
+
+const getArticlesCollection = async () => {
+  const db = await getMongoDb();
+  return db.collection<Article>('posts');
+};
+
+const getNextArticleId = async (): Promise<number> => {
+  const db = await getMongoDb();
+  const counters = db.collection<{ _id: string; seq: number }>('counters');
+  const res = await counters.findOneAndUpdate(
+    { _id: 'posts' },
+    { $inc: { seq: 1 } },
+    { upsert: true, returnDocument: 'after' },
+  );
+  const seq = (res as any)?.value?.seq as number | undefined;
+  if (typeof seq === 'number' && Number.isFinite(seq) && seq > 0) {
+    return seq;
+  }
+  const collection = await getArticlesCollection();
+  const last = await collection
+    .find({}, { projection: { _id: 0, id: 1 } })
+    .sort({ id: -1 })
+    .limit(1)
+    .toArray();
+  const lastId = (last?.[0] as any)?.id as number | undefined;
+  return (lastId || 0) + 1;
+};
 
 // Đảm bảo thư mục tồn tại (local only)
 const ensureDirectories = () => {
@@ -150,6 +185,20 @@ export const writeDatabase = async (data: Database): Promise<void> => {
 export const addArticle = async (
   articleData: Omit<Article, 'id' | 'createdAt' | 'updatedAt'>,
 ): Promise<Article> => {
+  if (useMongo) {
+    const collection = await getArticlesCollection();
+    const now = new Date().toISOString();
+    const newId = await getNextArticleId();
+    const newArticle: Article = {
+      ...articleData,
+      id: newId,
+      createdAt: now,
+      updatedAt: now,
+    };
+    await collection.insertOne(newArticle as any);
+    return newArticle;
+  }
+
   const db = await readDatabase();
   const newId = db.lastId + 1;
 
@@ -170,6 +219,15 @@ export const addArticle = async (
 
 // Lấy tất cả bài viết
 export const getAllArticles = async (): Promise<Article[]> => {
+  if (useMongo) {
+    const collection = await getArticlesCollection();
+    const articles = await collection
+      .find({}, { projection: { _id: 0 } })
+      .sort({ createdAt: -1 })
+      .toArray();
+    return articles as unknown as Article[];
+  }
+
   const db = await readDatabase();
   return db.articles.sort(
     (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
@@ -178,12 +236,47 @@ export const getAllArticles = async (): Promise<Article[]> => {
 
 // Lấy bài viết theo ID
 export const getArticleById = async (id: number): Promise<Article | null> => {
+  if (useMongo) {
+    const collection = await getArticlesCollection();
+    const article = await collection.findOne({ id }, { projection: { _id: 0 } });
+    return (article as unknown as Article) || null;
+  }
+
   const db = await readDatabase();
   return db.articles.find((article) => article.id === id) || null;
 };
 
 // Xóa bài viết
 export const deleteArticle = async (id: number): Promise<boolean> => {
+  if (useMongo) {
+    const collection = await getArticlesCollection();
+    const res = await collection.findOneAndDelete({ id });
+    const article = (res as any)?.value as Article | undefined;
+    if (!article) return false;
+    try {
+      if (useBlobStorage) {
+        if (article.thumbnail?.startsWith('http')) {
+          await del(article.thumbnail).catch(() => {});
+        }
+        if (article.content?.startsWith('http')) {
+          await del(article.content).catch(() => {});
+        }
+      } else {
+        const thumbLocal = path.join(process.cwd(), 'public', article.thumbnail);
+        const contentLocal = path.join(process.cwd(), 'public', article.content);
+        if (fs.existsSync(thumbLocal)) {
+          fs.unlinkSync(thumbLocal);
+        }
+        if (fs.existsSync(contentLocal)) {
+          fs.unlinkSync(contentLocal);
+        }
+      }
+    } catch (error) {
+      /* noop */
+    }
+    return true;
+  }
+
   const db = await readDatabase();
   const articleIndex = db.articles.findIndex((article) => article.id === id);
 
@@ -215,7 +308,7 @@ export const deleteArticle = async (id: number): Promise<boolean> => {
       }
     }
   } catch (error) {
-    console.error('Error deleting files:', error);
+    /* noop */
   }
 
   db.articles.splice(articleIndex, 1);
@@ -230,6 +323,17 @@ export const updateArticle = async (
   id: number,
   updates: Partial<Omit<Article, 'id' | 'createdAt'>>,
 ): Promise<Article | null> => {
+  if (useMongo) {
+    const collection = await getArticlesCollection();
+    const now = new Date().toISOString();
+    const res = await collection.findOneAndUpdate(
+      { id },
+      { $set: { ...updates, updatedAt: now } },
+      { returnDocument: 'after', projection: { _id: 0 } },
+    );
+    return ((res as any)?.value as Article) || null;
+  }
+
   const db = await readDatabase();
   const articleIndex = db.articles.findIndex((article) => article.id === id);
 

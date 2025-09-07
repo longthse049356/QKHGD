@@ -9,7 +9,11 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, {
+      // Ask upstream to send uncompressed to avoid double-decoding issues
+      headers: { 'accept-encoding': 'identity' },
+      cache: 'no-store',
+    });
     if (!res.ok) {
       return new Response('Upstream error', { status: 502 });
     }
@@ -17,6 +21,9 @@ export async function GET(request: NextRequest) {
     // Clone headers and force inline disposition for iframe
     const headers = new Headers(res.headers);
     headers.set('content-disposition', 'inline');
+    headers.delete('content-encoding');
+    headers.delete('content-length');
+    headers.delete('transfer-encoding');
 
     return new Response(res.body, {
       status: res.status,

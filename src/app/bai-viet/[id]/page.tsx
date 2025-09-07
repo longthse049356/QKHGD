@@ -5,12 +5,10 @@ import Link from 'next/link';
 
 async function getArticle(id: string) {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/articles/${id}`,
-      {
-        cache: 'no-store',
-      },
-    );
+    const response = await fetch(`/api/articles/${id}`, {
+      cache: 'no-store',
+      next: { revalidate: 0 },
+    });
 
     if (!response.ok) {
       if (response.status === 404) {

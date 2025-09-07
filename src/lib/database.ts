@@ -250,9 +250,12 @@ export const getArticleById = async (id: number): Promise<Article | null> => {
 export const deleteArticle = async (id: number): Promise<boolean> => {
   if (useMongo) {
     const collection = await getArticlesCollection();
-    const res = await collection.findOneAndDelete({ id });
-    const article = (res as any)?.value as Article | undefined;
+
+    // Lấy bài viết giống như getArticleById
+    const article = await getArticleById(id);
     if (!article) return false;
+
+    // Xóa file ảnh và content trước
     try {
       if (useBlobStorage) {
         if (article.thumbnail?.startsWith('http')) {
@@ -274,22 +277,20 @@ export const deleteArticle = async (id: number): Promise<boolean> => {
     } catch (error) {
       /* noop */
     }
+
+    // Xóa document theo id
+    await collection.deleteOne({ id });
     return true;
   }
 
-  const db = await readDatabase();
-  const articleIndex = db.articles.findIndex((article) => article.id === id);
-
-  if (articleIndex === -1) {
-    return false;
-  }
-
-  const article = db.articles[articleIndex];
+  // Local/Blob JSON mode
+  // Lấy bài viết giống như getArticleById
+  const article = await getArticleById(id);
+  if (!article) return false;
 
   // Xóa file ảnh và content
   try {
     if (useBlobStorage) {
-      // Only attempt to delete blobs if we stored URLs
       if (article.thumbnail?.startsWith('http')) {
         await del(article.thumbnail).catch(() => {});
       }
@@ -297,7 +298,6 @@ export const deleteArticle = async (id: number): Promise<boolean> => {
         await del(article.content).catch(() => {});
       }
     } else {
-      // Local filesystem cleanup
       const thumbLocal = path.join(process.cwd(), 'public', article.thumbnail);
       const contentLocal = path.join(process.cwd(), 'public', article.content);
       if (fs.existsSync(thumbLocal)) {
@@ -311,9 +311,9 @@ export const deleteArticle = async (id: number): Promise<boolean> => {
     /* noop */
   }
 
-  db.articles.splice(articleIndex, 1);
+  const db = await readDatabase();
+  db.articles = db.articles.filter((a) => a.id !== id);
   db.updatedAt = new Date().toISOString();
-
   await writeDatabase(db);
   return true;
 };

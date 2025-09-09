@@ -34,8 +34,8 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-              {/* Bank info with QR */}
-              <div className='mt-6 p-4 rounded-xl border-2 border-blue-400/60 bg-white/5'>
+            {/* Bank info with QR */}
+            <div className='mt-6 p-4 rounded-xl border-2 border-blue-400/60 bg-white/5'>
               <h5 className='text-lg font-medium text-white text-center md:text-left mb-3'>
                 Thông tin tài khoản
               </h5>
@@ -126,7 +126,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className='flex items-center justify-center pt-5 md:pt-7'>
           <p className='text-xs md:text-sm font-normal text-white text-center'>
             <Link href='#' className='hover:text-blue-200'>

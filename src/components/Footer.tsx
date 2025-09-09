@@ -55,7 +55,7 @@ const Footer = () => {
                     <span className='font-semibold'>Ngân hàng:</span> BIDV
                   </li>
                   <li>
-                    <span className='font-semibold'>Số TK:</span> 4330067930
+                    <span className='font-semibold'>Số TK:</span> 8834661886
                   </li>
                 </ul>
               </div>
